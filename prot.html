@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barath Kumar Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="b.jpg" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm <span>Barath</span> Kumar</h1>
+                <a href="resume.pdf" target="_blank" class="resume-button"><span style='color:white'>View
+                        Resume</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-row-col-1">
+                    <img src="bk.jpg" alt="Dhoni">
+                </div>
+                <div class="about-row-col-2">
+                    <h1 class="sub">About Me</h1>
+                    <p> I am an IT student Passionate about acquiring knowledge in new technologies showcasing my skills
+                        and contributing to
+                        the company's growth through dedication <br>and creativity.</p>
+                    <div class="tab-title">
+                        <p class="links active" onclick="openTab('skills')">Skills</p>
+                        <p class="links" onclick="openTab('Education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming languages</span><br>C, JAVA</li>
+                            <li><span>Full Stack Development</span><br>MERN STACK</li>
+                            <li><span>Database</span><br>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Education">
+                        <ul>
+                            <li><span>2025</span><br>B.TECH-IT -KONGU ENGINEERING COLLEGE</li>
+                            <li><span>2021</span><br>HSLC-VIDYAMANDIR MATRIC HR.SEC.SCHOOL</li>
+                            <li><span>2019</span><br>SSLC-VIDYAMANDIR MATRIC HR.SEC.SCHOOL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="portfolio-items">
+                <a href="https://github.com/barathkumar4/Hospital-Management-System" class="portfolio-item"
+                    target="_blank">
+                    <img src="h.JPG" alt="Project 1">
+                    <h3>Hospital Management</h3>
+                    <p>Using MongoDB, ExpressJS, React, NodeJS (MERN stack) ensuring efficient patient record management
+                        and streamlined administrative processes.</p>
+                </a>
+                <a href="https://github.com/barathkumar4/TOLL-GATE-MANAGEMENT" class="portfolio-item" target="_blank">
+                    <img src="TOLL.JPEG" alt="Project 2">
+                    <h3>Toll Gate Management</h3>
+                    <p>Using HTML, CSS, PHP, and SQL database. This provides a friendly interface for toll to handle
+                        toll
+                        gate operations effectively.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="https://formsubmit.co/barath.mummoorthy@gmail.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://linkedin.com/your-profile" target="_blank"><img src="linkedin-icon.png"
+                            alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/your-profile" target="_blank"><img src="github-icon.png"
+                            alt="GitHub"></a></li>
+                <li><a href="https://twitter.com/your-profile" target="_blank"><img src="twitter-icon.png"
+                            alt="Twitter"></a></li>
+            </ul>
+            <p>&copy; 2024 BARATHKUMAR M. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabContent, links;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active-tab");
+            }
+            links = document.getElementsByClassName("links");
+            for (i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active-tab");
+            event.currentTarget.classList.add("active");
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
